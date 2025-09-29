@@ -3,11 +3,50 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
 
+function App() {
+  const [color, setColor] = useState("olive")
   return (
-    <h1>react first project</h1>
+    <>
+      <div className='h-screen w-full duration-200 text-3xl text-center text-white'
+        style={{ backgroundColor: color }}>Color changing using react
+        <div className='fixed flex flex-wrap justify-center bottom-12 inset-x-0 px-2'>
+          <div className='flex flex-wrap justify-center gap-3 shadow-lg bg-white px-3 py-2 rounded-3xl'>
+            <button
+              onClick={() => setColor("red")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "red" }}>red</button>
+            <button
+              onClick={() => setColor("green")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "green" }}>green</button>
+            <button
+              onClick={() => setColor("black")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "black" }}>black</button>
+            <button
+              onClick={() => setColor("blue")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "blue" }}>blue</button>
+            <button
+              onClick={() => setColor("yellow")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "yellow" }}>yellow</button>
+            <button
+              onClick={() => setColor("pink")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "pink" }}>pink</button>
+            <button
+              onClick={() => setColor("skyblue")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "skyblue" }}>white</button>
+            <button
+              onClick={() => setColor("grey")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "grey" }}>grey</button>
+            <button
+              onClick={() => setColor("lightgreen")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "lightgreen" }}>parrot</button>
+            <button
+              onClick={() => setColor("skyblue")} className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+              style={{ backgroundColor: "skyblue" }}>sky</button>
+          </div>
+        </div>
+      </div>
+    </>
+
   )
 }
 
